@@ -8,8 +8,12 @@ description: Kit d'onboarding, de profil bilingue (FR/EN) et de visibilité rés
 Ce kit officiel d'intégration permet à tout entrepreneur ou dirigeant d'obtenir en quelques minutes l'ensemble de ses livrables de visibilité et de prospection :
 1. **3 Variantes de Bannières de Profil** (Ratio 16:9 HD & Miniature 300×180 px pour le répertoire et annuaires professionnels).
 2. **3 Variantes d'Affiches de Table au Format CARRÉ** (Format 2400×2400 px, 300 DPI pour les chevalets et déjeuners de réseautage).
-3. **Le Profil d'Annuaire Bilingue Prêt à l'Emploi** (Français et Anglais).
-4. **Le Kit de Pitchs Réseau Bilingue** (30s tour de table, 60s approfondi et demande de recommandation chirurgicale).
+3. **La Présentation Complète de l'Entreprise Bilingue** (Vision, pôles d'expertises, garanties 14 jours et conformité Loi 25 / RGPD en français et anglais).
+4. **Le Pitch d'Entreprise de 1 Minute Chrono** (Texte percutant de 60 secondes en français et anglais).
+5. **Le Profil d'Annuaire Bilingue Prêt à l'Emploi** (Français et Anglais).
+6. **Le Kit de Pitchs Réseau Bilingue** (30s tour de table, 60s approfondi et demande de recommandation chirurgicale).
+
+> **Conseil d'utilisation :** La manière la plus simple de l'utiliser, c'est de prendre le lien GitHub et de le donner à son IA et ça fonctionne.
 
 ---
 
@@ -71,13 +75,23 @@ L'agent invite le membre à fournir les informations suivantes :
 
 ## ✍️ 4. Textes Bilingues & Pitchs Livrés (FR / EN)
 
-### Profil Français & Anglais :
+### Présentation de l'Entreprise (Français & Anglais) :
+* Vision & Slogan du marché (90% adoption / 6% profit réel).
+* Les 4 pôles d'expertises détaillés sans jargon.
+* Engagements : premier livrable en 14 jours, Loi 25 / RGPD et code source propriété du client.
+* Diagnostic stratégique de 30 minutes sans engagement.
+
+### Pitch 1 Minute Chrono (Français & Anglais) :
+* Prise de parole de 60 secondes (~145 mots au rythme naturel) captivante et structurée.
+* Idéal pour tours de table, podcasts, webinaires et vidéos de présentation.
+
+### Profil Réseau & Annuaire (Français & Anglais) :
 * Introduction humaine et authentique : *« Bonjour, je m'appelle [Prénom Nom]. Passionné par... »*
 * Présentation claire des 3 à 4 pôles d'activités sans jargon.
-* Offre de bienvenue / privilège pour les membres de GR International.
+* Offre de bienvenue / privilège pour les membres du réseau.
 * Coordonnées complètes à Montréal.
 
-### Kit de Pitchs Réseau (Bilingue) :
+### Kit de Pitchs Réseau Bilingue :
 * Pitch de 30 secondes pour le tour de table hebdomadaire.
 * Pitch de 60 secondes avec storytelling.
 * Demande de recommandation spécifique de la semaine.

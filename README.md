@@ -11,6 +11,32 @@
 
 ---
 
+## 💡 La Méthode la Plus Simple d'Utilisation
+
+> **La manière la plus simple de l'utiliser, c'est de prendre le lien GitHub et de le donner à son IA et ça fonctionne.**
+
+Il vous suffit de copier l'URL du dépôt GitHub :
+```text
+https://github.com/Gufaca/gufaca-network-onboarding-kit
+```
+
+Et de transmettre cette consigne à votre assistant d'intelligence artificielle préféré (Google Antigravity, ChatGPT, Claude, Cursor, Copilot) :
+
+```text
+Voici le kit d'onboarding : https://github.com/Gufaca/gufaca-network-onboarding-kit
+Génère mes 3 affiches de table carrées, mes 3 bannières de profil, la présentation de mon entreprise et mon pitch d'une minute en français et en anglais avec les informations suivantes :
+- Mon Nom : [Prénom Nom]
+- Mon Entreprise : [Nom de l'entreprise]
+- Ma Spécialité : [Sous-titre / Spécialité]
+- Mon Site Web : [URL ou LinkedIn]
+- Mes Coordonnées : [Courriel, Téléphone, Ville]
+- Mon Logo et ma Photo en pièces jointes.
+```
+
+L'IA prend en charge l'exécution complète du script, l'extraction de vos couleurs de marque, la génération des visuels haute définition et la rédaction de vos documents textuels.
+
+---
+
 ## 📋 Contexte : Optimisé pour GR International
 
 Ce dépôt contient l'infrastructure logicielle et la compétence d'agent IA conçues pour propulser la visibilité des membres du réseau d'affaires **GR International** (ainsi que tout club d'entrepreneurs ou chambre de commerce).
@@ -75,6 +101,56 @@ Conçues spécialement au **format carré 1:1** haute définition (300 DPI), ave
 
 ---
 
+## 📝 3. Livrables Textuels Bilingues Générés Automatiquement (FR / EN)
+
+À chaque génération, le script produit directement dans le dossier de sortie (`out-dir`) les documents textuels prêts à l'emploi au format Markdown :
+
+### A. Présentation Complète de l'Entreprise (`presentation_entreprise_fr.md` & `presentation_entreprise_en.md`)
+Synthèse exécutive structurée en 4 volets :
+1. **Vision & Positionnement** : Accroche percutante issue de la réalité marché (ex: McKinsey 90% adoption / 6% rentabilité réelle).
+2. **Les 4 Pôles d'Expertise** : Descriptions détaillées des solutions (IA 24/7, développement web Next.js/React, SEO/GEO génératif, CTO externe).
+3. **Engagements & Méthodologie** : Garantie du premier livrable sous 14 jours, conformité stricte Loi 25 (Québec) & RGPD, et propriété exclusive du code client.
+4. **Offre Découverte & Prise de Contact** : Consultation de diagnostic stratégique de 30 minutes sans engagement.
+
+### B. Le Pitch d'Entreprise de 1 Minute Chrono (`pitch_1_minute_fr.md` & `pitch_1_minute_en.md`)
+Conçu spécifiquement pour une prise de parole de 60 secondes en réunion d'affaires ou tour de table (~145 mots au rythme naturel) :
+
+#### 🇫🇷 Pitch 1 Minute (Français) :
+```text
+Bonjour à tous, je suis Alpha Oumar Sow, ingénieur logiciel et fondateur de GUFACA à Montréal.
+
+Saviez-vous que 90 % des entreprises ont commencé à intégrer l'intelligence artificielle, mais que seulement 6 % réussissent réellement à en tirer un profit mesurable ? Chez GUFACA, nous travaillons précisément avec ces 6 %.
+
+La majorité des PME perdent entre 10 et 15 heures par semaine sur des tâches répétitives, la ressaisie manuelle de données ou des systèmes logiciels qui ne communiquent pas entre eux.
+
+Notre rôle est d'éliminer ces freins : nous concevons des agents IA sur-mesure qui automatisent vos processus 24h sur 24, nous développons des applications web et mobiles ultra-rapides, et nous prenons en charge votre direction technique externalisée.
+
+Notre promesse est concrète : un premier livrable fonctionnel en 14 jours chrono, avec une conformité totale à la Loi 25 québécoise et au RGPD.
+
+J'offre avec grand plaisir à chaque membre un diagnostic stratégique de 30 minutes sans engagement directement avec moi pour identifier vos gains de temps immédiats.
+
+Visitez gufaca.com ou venez échanger avec moi à la pause !
+```
+
+#### 🇬🇧 Pitch 1 Minute (English) :
+```text
+Hello everyone, I am Alpha Oumar Sow, software engineer and founder of GUFACA in Montreal.
+
+Did you know that 90% of businesses have started adopting artificial intelligence, yet only 6% are generating measurable bottom-line profit from it? At GUFACA, we work specifically with that 6%.
+
+Most growing companies lose 10 to 15 hours every week on repetitive tasks, manual data entry, and outdated software systems that do not talk to each other.
+
+Our mission is to eliminate those bottlenecks: we engineer custom 24/7 AI agents that automate your daily operations, develop high-performance web and mobile applications, and provide fractional CTO technical leadership.
+
+Our commitment is concrete: we deploy your first functional deliverable in 14 business days, with complete compliance with Quebec's Law 25 and GDPR privacy standards.
+
+I am pleased to offer every member a complimentary 30-minute strategic diagnostic session directly with me to identify your immediate ROI and efficiency gains.
+
+Visit gufaca.com or let's connect right after the meeting!
+```
+
+---
+
 ## 🛠️ Guide d'Installation Pas-à-Pas
 
 ### 1. Prérequis Système
@@ -110,42 +186,59 @@ pip install -r requirements.txt
 
 ---
 
-## 🧪 Comment Tester le Projet Immédiatement
+## 🧪 Comment Tester le Projet (Tests Unitaires & d'Intégration)
 
-Le projet intègre une suite de validation automatisée qui teste l'extraction de palette, génère l'ensemble des 6 fichiers et vérifie la scannabilité optique des QR codes :
+Le projet intègre une suite de validation complète combinant tests unitaires, tests d'intégration de bout en bout et vérification optique des QR codes.
 
+### 1. Exécution de la Suite Complète (Recommandé)
 ```bash
 python3 test_kit.py
+```
+
+### 2. Exécution des Tests Unitaires & d'Intégration via `unittest`
+Pour lancer l'ensemble des suites avec le framework standard Python :
+```bash
+# Lancer tous les tests découverts
+python3 -m unittest discover tests
+
+# Lancer uniquement les tests unitaires (palette, typo, textes, QR)
+python3 -m unittest tests/test_unit.py
+
+# Lancer uniquement les tests d'intégration (pipeline complet & décodage optique)
+python3 -m unittest tests/test_integration.py
 ```
 
 **Sortie attendue :**
 ```text
 ==================================================================
-  Démarrage des tests multi-styles GUFACA × GR International
+  Démarrage des tests officiels GUFACA (Sortie: outputs_v3)
+  Affiches CARRÉES 2400x2400 (300 DPI) & Bannières HD
 ==================================================================
 ✔ Test 1 : Actifs sources (photo + logo) validés.
 ✔ Test 2 : Couleurs dominantes extraites : Primaire=(78, 147, 91), Secondaire=(251, 176, 64)
 
 =======================================================
-  GÉNÉRATION COMPLÈTE GUFACA × GR INTERNATIONAL
-  3 Variantes de Bannières + 3 Variantes d'Affiches
+  GÉNÉRATION VISUELLE OFFICIELLE GUFACA (gufaca.com)
+  Format Affiches : 2400x2400 px (Carré 300 DPI)
+  Format Bannières : 16:9 HD (1376x768 px) & 300x180 px
+  Livrables Textuels : Présentations & Pitchs 1 min (FR/EN)
 =======================================================
 
-✔ Bannière Style 1 (Executive Classic) générée : .../banniere_style_1_executive_HD.jpg
-✔ Bannière Style 2 (Modern Circular) générée : .../banniere_style_2_circular_HD.jpg
-✔ Bannière Style 3 (Split Pro) générée : .../banniere_style_3_split_HD.jpg
-✔ Affiche Style 1 (Classic Centered) générée : .../affiche_style_1_centered.png
-✔ Affiche Style 2 (Header Card) générée : .../affiche_style_2_header_card.png
-✔ Affiche Style 3 (Asymmetric Bold) générée : .../affiche_style_3_asymmetric.png
+✔ Bannière Style 1 (Executive Classic) générée
+✔ Bannière Style 2 (Modern Circular) générée
+✔ Bannière Style 3 (Split Pro) générée
+✔ Affiche Carrée Style 1 (Prestige Centered) générée
+✔ Affiche Carrée Style 2 (Header Card) générée
+✔ Affiche Carrée Style 3 (Asymmetric Bold) générée
+✔ Documents textuels générés (Présentations, Pitchs 1 min, Profils FR/EN)
 
 ✔ Test 4 : Les 3 styles de bannières (HD et 300x180 px) sont 100% validés.
 ✔ Test 5 : Les 3 styles d'affiches de table CARRÉES (2400x2400 px) sont 100% validés.
-✔ Test 6 : QR Code décodé avec succès dans affiche_style_1_centered.png -> https://gufaca.com
-✔ Test 6 : QR Code décodé avec succès dans affiche_style_2_header_card.png -> https://gufaca.com
-✔ Test 6 : QR Code décodé avec succès dans affiche_style_3_asymmetric.png -> https://gufaca.com
+✔ Test 6 : QR Code décodé avec succès dans les 3 affiches -> https://gufaca.com
+✔ Test 7 : Les 6 documents textuels (Présentations, Pitchs 1 min, Profils FR/EN) sont 100% validés.
 
 ==================================================================
-  TOUS LES TESTS MULTI-STYLES SONT VALIDES AVEC SUCCÈS (100%)
+  TOUS LES TESTS SONT VALIDES AVEC SUCCÈS (100%)
 ==================================================================
 ```
 
@@ -226,18 +319,28 @@ Pour les nouveaux membres ne disposant pas encore d'un site internet moderne ou 
 gufaca-network-onboarding-kit/
 ├── README.md                      # Documentation complète (Installation, Usage, Architecture)
 ├── SKILL.md                       # Spécification de la compétence Antigravity AI Agent
-├── requirements.txt               # Dépendances Python (pillow, qrcode)
+├── requirements.txt               # Dépendances Python (pillow, qrcode, opencv-python)
+├── LICENSE                        # Licence libre MIT
 ├── .gitignore                     # Fichiers exclus du suivi git
-├── generate_member_assets.py      # Moteur graphique multi-styles (PIL)
-├── test_kit.py                    # Suite unitaire automatisée avec validation optique QR
-├── templates/
-│   ├── profile_template_fr.md     # Modèle de profil d'annuaire en français
-│   ├── profile_template_en.md     # Modèle de profil d'annuaire en anglais
+├── generate_member_assets.py      # Moteur multi-styles & générateur textuel bilingue
+├── test_kit.py                    # Suite complète de validation avec décodage optique QR
+├── tests/                         # Suite de tests structurée
+│   ├── __init__.py
+│   ├── test_unit.py               # Tests unitaires (palette, typographie, QR, livrables)
+│   └── test_integration.py       # Tests d'intégration de bout en bout (dimensions & QR)
+├── templates/                     # Gabarits de documents textuels
+│   ├── company_presentation_fr.md # Modèle de présentation d'entreprise (FR)
+│   ├── company_presentation_en.md # Modèle de présentation d'entreprise (EN)
+│   ├── pitch_1_minute_fr.md       # Modèle de pitch 1 minute (FR)
+│   ├── pitch_1_minute_en.md       # Modèle de pitch 1 minute (EN)
+│   ├── profile_template_fr.md     # Modèle de profil d'annuaire (FR)
+│   ├── profile_template_en.md     # Modèle de profil d'annuaire (EN)
 │   └── pitch_templates.md         # Pitchs oraux 30s, 60s et demandes de recommandations
 └── assets/
     ├── sample_logo.png            # Logo de démonstration GUFACA
     ├── sample_photo.png           # Photo de démonstration du dirigeant
-    └── outputs/                   # Les 6 actifs générés (3 bannières + 3 affiches)
+    ├── examples/                  # Exemples de démonstration suivis sur GitHub
+    └── outputs/                   # Actifs générés localement lors des exécutions
 ```
 
 ---

@@ -116,6 +116,25 @@ def run_tests(out_dir_name="outputs_v3"):
     else:
         print("ℹ Test 6 ignoré : OpenCV non disponible pour le décodage automatisé.")
 
+    # Test 7 : Validation des documents textuels bilingues (Présentation, Pitch 1 min, Profils)
+    text_files = [
+        "presentation_entreprise_fr.md",
+        "presentation_entreprise_en.md",
+        "pitch_1_minute_fr.md",
+        "pitch_1_minute_en.md",
+        "profil_membre_fr.md",
+        "profil_membre_en.md"
+    ]
+    for tf in text_files:
+        p = os.path.join(out_dir, tf)
+        assert os.path.exists(p), f"Document textuel manquant : {p}"
+        with open(p, "r", encoding="utf-8") as f:
+            content = f.read()
+            assert len(content) > 150, f"Document trop court : {tf}"
+            assert "GUFACA" in content, f"GUFACA absent dans {tf}"
+            assert "gufaca.com" in content, f"gufaca.com absent dans {tf}"
+    print("✔ Test 7 : Les 6 documents textuels (Présentations, Pitchs 1 min, Profils FR/EN) sont 100% validés.")
+
     print("\n==================================================================")
     print(f"  TOUS LES TESTS SONT VALIDES AVEC SUCCÈS (100%)")
     print(f"  Dossier vérifié : assets/{out_dir_name}")

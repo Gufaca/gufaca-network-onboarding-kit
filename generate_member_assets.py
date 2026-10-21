@@ -954,13 +954,255 @@ def generate_banner_style_3_split(
 
 
 # ==============================================================================
-# 6. EXÉCUTION GLOBALE DE TOUTES LES VARIANTES
+# 6. GÉNÉRATION DES DOCUMENTS TEXTUELS BILINGUES (FR / EN)
+# ==============================================================================
+
+def generate_text_deliverables(name, company, subtitle, website, email, phone, city, out_dir):
+    """Génère les présentations d'entreprise, pitchs 1 minute et profils bilingues (FR/EN)."""
+    os.makedirs(out_dir, exist_ok=True)
+
+    # 1. Présentation d'entreprise (Français)
+    pres_fr = f"""# Présentation de l'Entreprise : {company}
+
+## 1. Vision & Positionnement
+
+« 90 % des entreprises ont adopté l'IA. 6 % en tirent profit. Nous travaillons sur ces 6 %. »
+
+Chez {company}, notre mission est de rendre la technologie de pointe, l'intelligence artificielle et l'automatisation directement rentables, sécurisées et accessibles pour les PME et entreprises en croissance.
+
+Fondée à {city} par {name}, ingénieur logiciel cumulant plus de 10 ans d'expérience au sein de grands groupes technologiques, notre firme accompagne les dirigeants qui souhaitent éliminer les tâches répétitives, moderniser leurs outils métier et accélérer leur développement sans complexité technique.
+
+## 2. Nos 4 Pôles d'Expertise
+
+1. Intelligence Artificielle & Automatisation 24/7
+Conception et déploiement d'agents IA autonomes, automatisation du traitement de documents (factures, devis, contrats) et intégration fluide à vos outils existants (CRM, ERP, messageries).
+
+2. Sites Web & Applications Mobiles sur-mesure
+Développement sur-mesure avec les technologies web les plus performantes (Next.js, React, Tailwind CSS). Interfaces ultra-rapides, design moderne et parcours pensés pour convertir les visiteurs en clients.
+
+3. Référencement SEO & GEO (Google & Moteurs IA)
+Optimisation pour les moteurs de recherche traditionnels et pour la nouvelle génération de moteurs génératifs (ChatGPT Search, Perplexity, Google Gemini) afin d'assurer une visibilité maximale à votre marque.
+
+4. Direction Technique (CTO Externe) & Formations
+Accompagnement stratégique pour éclairer vos choix technologiques, auditer vos architectures, sécuriser vos données et former vos équipes aux meilleures pratiques de l'IA.
+
+## 3. Notre Engagement & Méthodologie
+
+Premier livrable fonctionnel en 14 jours chrono. Décisions, coûts et risques écrits d'avance pour une visibilité totale.
+
+Conformité rigoureuse aux lois sur la protection des données et de la vie privée (Loi 25 au Québec et RGPD).
+
+Architecture logicielle robuste, souveraine et pérenne avec code source propriété exclusive du client.
+
+## 4. Offre Découverte & Prise de Contact
+
+Nous offrons à chaque dirigeant et membre un diagnostic stratégique de 30 minutes sans engagement directement avec un ingénieur pour analyser vos processus et chiffrer vos gains potentiels.
+
+Bureau : {city}
+
+Téléphone : {phone}
+
+Courriel : {email}
+
+Site web : {website}
+"""
+    with open(os.path.join(out_dir, "presentation_entreprise_fr.md"), "w", encoding="utf-8") as f:
+        f.write(pres_fr)
+
+    # 2. Présentation d'entreprise (Anglais)
+    pres_en = f"""# Company Overview: {company}
+
+## 1. Vision & Strategic Positioning
+
+"90% of businesses have adopted AI. Only 6% profit from it. We work on that 6%."
+
+At {company}, our mission is to make advanced technology, artificial intelligence, and intelligent automation directly profitable, secure, and accessible for SMBs and growing organizations.
+
+Founded in {city} by {name}, a software engineer with over 10 years of engineering experience across premier technology corporations, our company supports business leaders who want to eliminate manual bottlenecks, modernize core software, and scale operations with zero technical friction.
+
+## 2. Our 4 Core Pillars of Expertise
+
+1. Artificial Intelligence & 24/7 Automation
+Design and deployment of autonomous AI agents, automated document processing (invoices, quotes, contracts), and seamless integration with existing software (CRM, ERP, messaging).
+
+2. Custom Web & Mobile Applications
+Bespoke software development utilizing industry-leading web frameworks (Next.js, React, Tailwind CSS). High-performance interfaces, modern aesthetics, and conversion-optimized user journeys.
+
+3. SEO & GEO (Google & Generative AI Search)
+Strategic search optimization for both traditional search engines and AI generative engines (ChatGPT Search, Perplexity, Google Gemini) ensuring maximum market visibility.
+
+4. Fractional CTO & Enterprise Training
+Executive advisory to guide technology investments, audit software architectures, safeguard sensitive data, and train teams on applied AI best practices.
+
+## 3. Our Guarantees & Delivery Methodology
+
+First functional deliverable deployed within 14 business days. Upfront technical decisions, transparent budgets, and fully documented roadmaps.
+
+Strict compliance with privacy legislation and enterprise security standards (Quebec's Law 25 and European GDPR).
+
+Enterprise-grade architecture with zero vendor lock-in: complete client ownership of source code, intellectual property, and data pipelines.
+
+## 4. Complimentary Discovery & Contact
+
+We offer every business leader a complimentary 30-minute discovery consultation directly with an engineer to audit your workflow and quantify your immediate ROI.
+
+Office: {city}
+
+Phone: {phone}
+
+Email: {email}
+
+Website: {website}
+"""
+    with open(os.path.join(out_dir, "presentation_entreprise_en.md"), "w", encoding="utf-8") as f:
+        f.write(pres_en)
+
+    # 3. Pitch 1 minute (Français)
+    pitch_fr = f"""# Pitch d'Entreprise — 1 Minute Chrono (Français)
+
+Durée estimée : 60 secondes (environ 140 à 150 mots au rythme naturel).
+
+Texte à déclamer :
+
+Bonjour à tous, je suis {name}, ingénieur logiciel et fondateur de {company} à {city}.
+
+Saviez-vous que 90 % des entreprises ont commencé à intégrer l'intelligence artificielle, mais que seulement 6 % réussissent réellement à en tirer un profit mesurable ? Chez {company}, nous travaillons précisément avec ces 6 %.
+
+La majorité des PME perdent entre 10 et 15 heures par semaine sur des tâches répétitives, la ressaisie manuelle de données ou des systèmes logiciels qui ne communiquent pas entre eux.
+
+Notre rôle est d'éliminer ces freins : nous concevons des agents IA sur-mesure qui automatisent vos processus 24h sur 24, nous développons des applications web et mobiles ultra-rapides, et nous prenons en charge votre direction technique externalisée.
+
+Notre promesse est concrète : un premier livrable fonctionnel en 14 jours chrono, avec une conformité totale à la Loi 25 québécoise et au RGPD.
+
+J'offre avec grand plaisir à chaque membre un diagnostic stratégique de 30 minutes sans engagement directement avec moi pour identifier vos gains de temps immédiats.
+
+Visitez {website} ou venez échanger avec moi à la pause !
+"""
+    with open(os.path.join(out_dir, "pitch_1_minute_fr.md"), "w", encoding="utf-8") as f:
+        f.write(pitch_fr)
+
+    # 4. Pitch 1 minute (Anglais)
+    pitch_en = f"""# Company Pitch — 1 Minute Chrono (English)
+
+Estimated delivery time: 60 seconds (approximately 140 to 150 words at a natural speaking pace).
+
+Verbatim Pitch:
+
+Hello everyone, I am {name}, software engineer and founder of {company} in {city}.
+
+Did you know that 90% of businesses have started adopting artificial intelligence, yet only 6% are generating measurable bottom-line profit from it? At {company}, we work specifically with that 6%.
+
+Most growing companies lose 10 to 15 hours every week on repetitive tasks, manual data entry, and outdated software systems that do not talk to each other.
+
+Our mission is to eliminate those bottlenecks: we engineer custom 24/7 AI agents that automate your daily operations, develop high-performance web and mobile applications, and provide fractional CTO technical leadership.
+
+Our commitment is concrete: we deploy your first functional deliverable in 14 business days, with complete compliance with Quebec's Law 25 and GDPR privacy standards.
+
+I am pleased to offer every member a complimentary 30-minute strategic diagnostic session directly with me to identify your immediate ROI and efficiency gains.
+
+Visit {website} or let's connect right after the meeting!
+"""
+    with open(os.path.join(out_dir, "pitch_1_minute_en.md"), "w", encoding="utf-8") as f:
+        f.write(pitch_en)
+
+    # 5. Profil membre (Français)
+    prof_fr = f"""# Profil Réseau & Annuaire : {name} — {company}
+
+Bonjour, je m'appelle {name}.
+
+Passionné par l'ingénierie logicielle et l'intelligence artificielle depuis plus de 10 ans, j'ai souvent constaté la même réalité chez les entrepreneurs et dirigeants d'ici : les journées filent à toute vitesse, les tâches administratives et répétitives s'accumulent, et on manque de temps pour ce qui compte vraiment.
+
+C'est pour répondre à ce défi que j'ai fondé {company} : rendre l'automatisation intelligente et les outils web modernes accessibles, humains et directement rentables pour nos entreprises.
+
+Pas de jargon compliqué. Pas de promesses creuses. Juste des solutions concrètes pour vous faire gagner du temps chaque semaine, réduire vos coûts et accélérer vos ventes.
+
+Nos expertises concrètes :
+
+1. Intelligence Artificielle & Automatisation 24/7
+Agents IA autonomes et automatisation des flux de travail récurrents.
+
+2. Sites Web & Applications Mobiles sur-mesure
+Conception moderne et haute performance sous Next.js et React.
+
+3. Référencement SEO & GEO (Google & Moteurs IA)
+Positionnement sur Google et les moteurs génératifs ChatGPT, Perplexity et Gemini.
+
+4. Direction Technique (CTO Externe) & Formations
+Accompagnement technologique stratégique et gouvernance sécurisée.
+
+Privilège pour les membres du réseau :
+
+J'offre avec plaisir à chaque membre un diagnostic stratégique de 30 minutes sans engagement directement avec un ingénieur.
+
+Coordonnées :
+
+Bureau : {city}
+
+Téléphone : {phone}
+
+Courriel : {email}
+
+Site web : {website}
+"""
+    with open(os.path.join(out_dir, "profil_membre_fr.md"), "w", encoding="utf-8") as f:
+        f.write(prof_fr)
+
+    # 6. Profil membre (Anglais)
+    prof_en = f"""# Directory & Business Network Profile: {name} — {company}
+
+Hello, my name is {name}.
+
+Passionate about software engineering and artificial intelligence for over 10 years, I regularly see the same reality among local business owners and executives: days fly by, administrative and repetitive tasks pile up, and leaders run out of time for what truly matters.
+
+That is why I founded {company}: to make intelligent automation and modern software tools accessible, human, and directly profitable for SMBs.
+
+No complex jargon. No empty promises. Just concrete solutions to save you valuable hours each week, cut costs, and accelerate your growth.
+
+Our Core Areas of Expertise:
+
+1. Artificial Intelligence & 24/7 Automation
+Autonomous AI agents and seamless workflow automation.
+
+2. Custom Web & Mobile Applications
+High-performance modern software development built with Next.js and React.
+
+3. SEO & GEO (Google & AI Search Engines)
+Premium visibility on Google, ChatGPT Search, Perplexity, and Gemini.
+
+4. Fractional CTO Advisory & Corporate Training
+Strategic technical direction and secure enterprise architecture.
+
+Exclusive Privilege for Network Members:
+
+I am pleased to offer every member a complimentary 30-minute strategic diagnostic consultation directly with an engineer.
+
+Contact Details:
+
+Office: {city}
+
+Phone: {phone}
+
+Email: {email}
+
+Website: {website}
+"""
+    with open(os.path.join(out_dir, "profil_membre_en.md"), "w", encoding="utf-8") as f:
+        f.write(prof_en)
+
+    print(f"✔ Documents textuels générés dans : {out_dir}")
+    print("  - presentation_entreprise_fr.md & presentation_entreprise_en.md")
+    print("  - pitch_1_minute_fr.md & pitch_1_minute_en.md")
+    print("  - profil_membre_fr.md & profil_membre_en.md")
+
+
+# ==============================================================================
+# 7. EXÉCUTION GLOBALE DE TOUTES LES VARIANTES
 # ==============================================================================
 
 def run_all_variations(
     photo_path, logo_path, name, company, subtitle, headline, bullets, services, website, email, phone, city, out_dir
 ):
-    """Génère l'ensemble complet des 3 styles de bannières et 3 styles d'affiches carrées."""
+    """Génère l'ensemble complet des 3 styles de bannières, 3 styles d'affiches carrées et livrables textuels."""
     os.makedirs(out_dir, exist_ok=True)
     contact_line = f"{email}  •  {phone}  •  {city}  •  gufaca.com"
 
@@ -968,6 +1210,7 @@ def run_all_variations(
     print(f"  GÉNÉRATION VISUELLE OFFICIELLE GUFACA (gufaca.com)")
     print(f"  Format Affiches : 2400x2400 px (Carré 300 DPI)")
     print(f"  Format Bannières : 16:9 HD (1376x768 px) & 300x180 px")
+    print(f"  Livrables Textuels : Présentations & Pitchs 1 min (FR/EN)")
     print(f"=======================================================\n")
 
     # 1. Bannières (HD 16:9 + Miniature Annuaire 300x180 px)
@@ -1004,8 +1247,20 @@ def run_all_variations(
         os.path.join(out_dir, "affiche_style_3_asymmetric.jpg")
     )
 
+    # 3. Documents textuels bilingues (FR / EN)
+    generate_text_deliverables(
+        name=name,
+        company=company,
+        subtitle=subtitle,
+        website=website,
+        email=email,
+        phone=phone,
+        city=city,
+        out_dir=out_dir
+    )
+
     print(f"\n=======================================================")
-    print(f"  ✔ TOUTES LES VARIANTES SONT GÉNÉRÉES AVEC SUCCÈS !")
+    print(f"  ✔ TOUTES LES VARIANTES & DOCUMENTS SONT GÉNÉRÉS AVEC SUCCÈS !")
     print(f"  Dossier de sortie : {out_dir}")
     print(f"=======================================================\n")
 
